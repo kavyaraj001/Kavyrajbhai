@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kavyraj Atodariya - Login</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top left, #0d0d2b, #1a1a3d, #0d0d2b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .login-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #a2cffe;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 16px;
+      box-shadow: 0 0 5px #a2cffe66 inset;
+      transition: 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 10px #a2cffeaa inset;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00bcd4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0097a7;
+    }
+
+    .error {
+      color: #ff8080;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Kavyraj Atodariya</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <div class="error" id="errorMsg"></div>
+    <div class="footer">Space themed login • Created with ??</div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const error = document.getElementById("errorMsg");
+
+      if (username === "kavyraj" && password === "kattu") {
+        error.style.color = "#a2fca2";
+        error.textContent = "Login successful ?";
+        setTimeout(() => {
+          window.location.href = "batchpage.html"; // Redirect to batch code page
+        }, 1000);
+      } else {
+        error.style.color = "#ff8080";
+        error.textContent = "Invalid username or password ?";
+      }
+    }
+  </script>
+</body>
+</html>
