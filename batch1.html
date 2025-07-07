@@ -1,127 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Batch 1 - 12th Science</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
-      background-attachment: fixed;
-      color: #ff4c4c;
-      padding: 40px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      padding: 40px 20px;
+      line-height: 1.6;
     }
 
     h1 {
       text-align: center;
       font-size: 3rem;
       margin-bottom: 40px;
-      color: #ff1c1c;
-      text-shadow: 2px 2px 8px #000000;
+      color: #f5f5f5;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
     }
 
     .subject {
-      background-color: rgba(50, 0, 0, 0.85);
-      border-radius: 10px;
-      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      margin: 30px auto;
       padding: 20px;
-      max-width: 700px;
-      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+      max-width: 800px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
     }
 
     .subject h2 {
       cursor: pointer;
-      font-size: 2rem;
-      margin: 0;
-      color: #ff6666;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #00f0ff;
+      transition: color 0.2s ease-in-out;
+    }
+
+    .subject h2:hover {
+      color: #00c6ff;
     }
 
     .chapters, .topics {
       display: none;
       margin-top: 15px;
       padding-left: 20px;
+      animation: fadeIn 0.3s ease-in-out forwards;
     }
 
     .chapter {
-      background-color: rgba(255, 0, 0, 0.2);
+      background-color: rgba(0, 255, 255, 0.1);
       margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
+      padding: 12px 16px;
+      border-radius: 10px;
+      color: #e0ffff;
       cursor: pointer;
-      transition: background 0.3s;
-      color: #ffcccc;
+      transition: background 0.3s ease;
     }
 
     .chapter:hover {
-      background-color: rgba(255, 0, 0, 0.35);
+      background-color: rgba(0, 255, 255, 0.2);
     }
 
     .topic {
-      background-color: rgba(255, 0, 0, 0.1);
-      margin: 6px 0;
-      padding: 8px;
-      border-radius: 5px;
-      color: #ffdada;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin: 8px 0;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: #b2fefa;
     }
 
     .topic a {
-      color: #ff9999;
+      color: #7cf0ff;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .topic a:hover {
       text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .solution-02 {
+      margin: 8px 0;
+      padding-left: 10px;
+    }
+
+    .solution-02 a {
+      color: #ffcaff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .solution-02 a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 2.2rem;
-      }
-
-      .subject {
-        padding: 15px;
+        font-size: 2rem;
       }
 
       .subject h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+      }
+
+      .chapter {
+        font-size: 0.95rem;
+      }
+
+      .topic {
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-<h1>Welcome to Batch 1 - Std 12 Science (GSEB)</h1>
+<h1>Batch 1 – 12th Science (GSEB)</h1>
 
 <div class="subject">
   <h2 onclick="toggleNext(this)">Maths</h2>
   <div class="chapters">
     <div class="chapter" onclick="toggleNext(this)">Relations & Functions</div>
     <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Inverse Trigonometric Functions</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Matrices</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Determinants</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Continuity & Differentiability</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Application of Derivatives</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Integrals</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Application of Integrals</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Differential Equations</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Vector Algebra</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Three-Dimensional Geometry</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Linear Programming</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Probability</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
+    <!-- Add more chapters here as needed -->
   </div>
 </div>
 
@@ -130,40 +143,20 @@
   <div class="chapters">
     <div class="chapter" onclick="toggleNext(this)">Electric Charges & Fields</div>
     <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Electrostatic Potential & Capacitance</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Current Electricity</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Moving Charges & Magnetism</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Magnetism & Matter</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Electromagnetic Induction</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Alternating Current</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Electromagnetic Waves</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
+    <!-- Add more chapters here as needed -->
   </div>
 </div>
+
 <div class="subject">
   <h2 onclick="toggleNext(this)">Chemistry</h2>
   <div class="chapters">
-    <div class="chapter" onclick="toggleNext(this)">solution</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Solutions</div>
+    <div class="topics">
+      <div class="solution-02"><a href="https://drive.google.com/file/d/1Xb3t9QVlwZ24YyHHd8dIgGzomSVC07EU/view?usp=sharing">Solution 1</a></div>
+      <div class="solution-02"><a href="https://drive.google.com/file/d/1YESGHZ0y4epwb4K7bcEmBTm00E0LFnOG/view?usp=sharing">Solution 2</a></div>
+      <div class="solution-02"><a href="https://drive.google.com/file/d/1oUA5zL0eXGqp43RbUioBELCXaPliN5zV/view?usp=sharing">Solution 3</a></div>
+    </div>
     <div class="chapter" onclick="toggleNext(this)">Electrochemistry</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">chemical knectic</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Moving Charges & Magnetism</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Magnetism & Matter</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Electromagnetic Induction</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Alternating Current</div>
-    <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
-    <div class="chapter" onclick="toggleNext(this)">Electromagnetic Waves</div>
     <div class="topics"><div class="topic"><a href="#">Topic 1</a></div></div>
   </div>
 </div>
