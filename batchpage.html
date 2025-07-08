@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Kattu Tuition Class</title>
-  <style>
+  <style> 
     * {
       margin: 0;
       padding: 0;
@@ -201,9 +201,6 @@
       <div class="social">
         <div>Get social</div>
         <div class="icons">
-          <a href="#">??</a>
-          <a href="#">??</a>
-          <a href="#">??</a>
         </div>
         <div class="username">kavy_araj1602</div>
         <div class="line"></div>
@@ -247,6 +244,37 @@
         msg.innerText = "? Batch code verified successfully!";
         setTimeout(() => {
           window.location.href = "batch1.html";
+        }, 2000);
+      } else {
+        msg.innerText = "? Invalid batch code!";
+        msg.style.color = "red";
+      }
+    }
+
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <script>
+    const modal = document.getElementById("batchModal");
+    const btn = document.getElementById("batchBtn");
+    const input = document.getElementById("batchInput");
+    const msg = document.getElementById("msg");
+    const correctCode = "PCM11"; // ? You can change this
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+      msg.innerText = "";
+      input.value = "";
+    }
+    function checkBatchCode() {
+      const enteredCode = input.value.trim();
+      if (enteredCode === correctCode) {
+        msg.innerText = "? Batch code verified successfully!";
+        setTimeout(() => {
+          window.location.href = "batch2.html";
         }, 2000);
       } else {
         msg.innerText = "? Invalid batch code!";
