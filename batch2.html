@@ -89,24 +89,38 @@
   <h2 onclick="toggleNext(this)">Maths</h2>
   <div class="chapters">
     <div class="chapter" onclick="toggleNext(this)">Chapter 1: Sets</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: Venn Diagrams</a></div>
-    </div>
-    <div class="chapter" onclick="toggleNext(this)">Chapter 2: Trigonometry</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: Trig Identities</a></div>
-    </div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Venn Diagrams</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 2: Relations and Functions</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Types of Functions</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 3: Trigonometric Functions</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Trig Identities</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 4: Principle of Mathematical Induction</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Induction Process</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 5: Complex Numbers</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Argand Plane</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 6: Linear Inequalities</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Graphical Solution</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 7: Permutations and Combinations</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Factorial Notation</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 8: Binomial Theorem</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: General Term</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 9: Sequences and Series</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Arithmetic Series</a></div></div>
   </div>
 </div>
 
 <!-- Physics -->
 <div class="subject">
   <h2 onclick="toggleNext(this)">Physics</h2>
-  <div class="chapters"></div>
-    <div class="chapter" onclick="toggleNext(this)">Chapter 1: Units & Measurements</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: SI Units</a></div>
-    </div>
+  <div class="chapters">
+    <div class="chapter" onclick="toggleNext(this)">Chapter 1: Physical World</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Scope and Excitement of Physics</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 2: Units and Measurements</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: SI Units and Errors</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 3: Motion in a Straight Line</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Velocity-Time Graphs</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 4: Motion in a Plane</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Projectile Motion</a></div></div>
   </div>
 </div>
 
@@ -115,13 +129,11 @@
   <h2 onclick="toggleNext(this)">Chemistry</h2>
   <div class="chapters">
     <div class="chapter" onclick="toggleNext(this)">Chapter 1: Some Basic Concepts of Chemistry</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: Mole Concept</a></div>
-    </div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Mole Concept</a></div></div>
     <div class="chapter" onclick="toggleNext(this)">Chapter 2: Structure of Atom</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: Quantum Numbers</a></div>
-    </div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Quantum Numbers</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 3: Classification of Elements</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Modern Periodic Law</a></div></div>
   </div>
 </div>
 
@@ -130,8 +142,23 @@
   <h2 onclick="toggleNext(this)">English</h2>
   <div class="chapters">
     <div class="chapter" onclick="toggleNext(this)">Chapter 1: The Portrait of a Lady</div>
-    <div class="topics">
-      <div class="topic"><a href="#">Topic 1: Summary</a></div>
-    </div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Summary</a></div></div>
     <div class="chapter" onclick="toggleNext(this)">Chapter 2: We Are Not Afraid to Die...</div>
-    <d
+    <div class="topics"><div class="topic"><a href="#">Topic: Explanation</a></div></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 3: Discovering Tut</div>
+    <div class="topics"><div class="topic"><a href="#">Topic: Archaeology Report</a></div></div>
+  </div>
+</div>
+
+<script>
+  function toggleNext(element) {
+    const next = element.nextElementSibling;
+    if (next && (next.classList.contains('chapters') || next.classList.contains('topics'))) {
+      next.style.display = next.style.display === 'block' ? 'none' : 'block';
+    }
+    event.stopPropagation();
+  }
+</script>
+
+</body>
+</html>
