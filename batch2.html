@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Batch 2 - 11th Science</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #e8f5e9;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .subject {
+      background-color: rgba(0, 100, 0, 0.7);
+      border-radius: 10px;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 700px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .subject h2 {
+      cursor: pointer;
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .chapters, .topics {
+      display: none;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .chapter, .topic {
+      cursor: pointer;
+      margin: 8px 0;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .chapter:hover, .topic:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    a {
+      color: #c0ffb3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .subject {
+        padding: 15px;
+      }
+
+      .subject h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Welcome to Batch 2 - Std 11 Science (GSEB)</h1>
+
+<!-- Maths -->
+<div class="subject">
+  <h2 onclick="toggleNext(this)">Maths</h2>
+  <div class="chapters">
+    <div class="chapter" onclick="toggleNext(this)">Chapter 1: Sets</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: Venn Diagrams</a></div>
+    </div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 2: Trigonometry</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: Trig Identities</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- Physics -->
+<div class="subject">
+  <h2 onclick="toggleNext(this)">Physics</h2>
+  <div class="chapters"></div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 1: Units & Measurements</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: SI Units</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- Chemistry -->
+<div class="subject">
+  <h2 onclick="toggleNext(this)">Chemistry</h2>
+  <div class="chapters">
+    <div class="chapter" onclick="toggleNext(this)">Chapter 1: Some Basic Concepts of Chemistry</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: Mole Concept</a></div>
+    </div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 2: Structure of Atom</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: Quantum Numbers</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- English -->
+<div class="subject">
+  <h2 onclick="toggleNext(this)">English</h2>
+  <div class="chapters">
+    <div class="chapter" onclick="toggleNext(this)">Chapter 1: The Portrait of a Lady</div>
+    <div class="topics">
+      <div class="topic"><a href="#">Topic 1: Summary</a></div>
+    </div>
+    <div class="chapter" onclick="toggleNext(this)">Chapter 2: We Are Not Afraid to Die...</div>
+    <d
