@@ -95,7 +95,15 @@
   </style>
 </head>
 <body>
+
+  <!-- Background Music (Autoplay + Loop) -->
+  <audio autoplay loop>
+    <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="overlay"></div>
+
   <div class="login-container">
     <h2>Welcome Kavyraj Atodariya</h2>
     <input type="text" id="username" placeholder="Username" />
@@ -104,6 +112,7 @@
     <div class="error" id="errorMsg"></div>
     <div class="footer">Forest themed login • Created with ❤️</div>
   </div>
+
   <script>
     function login() {
       const username = document.getElementById("username").value.trim();
@@ -114,7 +123,7 @@
         error.style.color = "#a2fca2";
         error.textContent = "Login successful ✅";
         setTimeout(() => {
-          window.location.href = "batchpage.html"; // Redirect to batch code page
+          window.location.href = "batchpage.html";
         }, 1000);
       } else {
         error.style.color = "#ff8080";
@@ -122,5 +131,6 @@
       }
     }
   </script>
+
 </body>
 </html>
